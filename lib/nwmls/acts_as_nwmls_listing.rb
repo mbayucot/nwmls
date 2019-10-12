@@ -450,7 +450,7 @@ module Nwmls
 
         def self.expand_attribute(attr)
           begin
-            ALL_CODES[attr].underscore.parameterize('_')
+            ALL_CODES[attr].underscore.parameterize(separator: '_')
           rescue NoMethodError
             raise "unexpected attribute #{attr}"
           end
